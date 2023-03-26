@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+//Recebe a função por props vindo de App
 function CardAdicionar({adicionarTarefa}){
 
     const [texto, setTexto] = useState('')
