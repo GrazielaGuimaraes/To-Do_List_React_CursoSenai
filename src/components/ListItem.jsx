@@ -15,7 +15,7 @@ function ListItem({tarefa, removerTarefa}){
 
             <button onClick={finalizarTarefa}>Tarefa concluida</button>
 
-            <button onClick={removerTarefa}>Remover</button>
+            <button onClick={removerTarefa(tarefa)}>Remover</button>
         </div>
     )
 }
