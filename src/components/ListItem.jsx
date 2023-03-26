@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-function ListItem({tarefa}){
+function ListItem({tarefa, removerTarefa}){
 
     const [tarefaConcluida, setTarefaConcluida] = useState(tarefa)
 
@@ -15,6 +15,7 @@ function ListItem({tarefa}){
 
             <button onClick={finalizarTarefa}>Tarefa concluida</button>
 
+            <button onClick={removerTarefa}>Remover</button>
         </div>
     )
 }

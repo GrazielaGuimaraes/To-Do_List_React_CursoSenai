@@ -16,6 +16,15 @@ function App() {
     {id: 2, texto: "Comprar pneus novos", concluida:true}
   ])
 
+
+  function removerTarefa(tarefa){
+
+    tarefas.map(tarefa => {
+      tarefa.pop()
+    })
+
+  }
+
   function criarTarefa(texto){
 
     let novaLista = [...lista]
@@ -25,24 +34,13 @@ function App() {
       concluida: false //inicia com false no checkbox
     })
 
-    tarefas.map(tarefa => {
-      <ListItem/>
-    })
-
-
-
-
-
-
-
-
-
+   
 
   }
 
   return (
     <div className="App">
-     
+     <ListItem removerTarefa={removerTarefa}/>
     </div>
   )
 }
