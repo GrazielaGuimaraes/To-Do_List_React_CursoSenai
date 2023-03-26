@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+//importando componente
+import ListItem from './components/ListItem'
 import './App.css'
 
 function App() {
@@ -22,6 +24,19 @@ function App() {
       texto: texto, //por parâmetro
       concluida: false //inicia com false no checkbox
     })
+
+    tarefas.map(tarefa => {
+      <ListItem/>
+    })
+
+
+
+
+
+
+
+
+
 
   }
 

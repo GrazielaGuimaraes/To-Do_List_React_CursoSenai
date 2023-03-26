@@ -3,11 +3,11 @@ import { useState } from "react"
 
 function ListItem({tarefa}){
 
-    const [tarefaConcluida, setTarefaConcluida] = useState({concluida})
+    const [tarefaConcluida, setTarefaConcluida] = useState(tarefa)
 
     function finalizarTarefa() {
 
-        setTarefaConcluida(tarefa, tarefaConcluida)
+        setTarefaConcluida(tarefaConcluida, tarefa)
     }
 
     return(
