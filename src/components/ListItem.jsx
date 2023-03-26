@@ -1,22 +1,24 @@
 import { useState } from "react"
 
 
-function ListItem({tarefa, removerTarefa}){
 
-    const [tarefaConcluida, setTarefaConcluida] = useState(tarefa)
+function ListItem({item}){
 
-    function finalizarTarefa() {
+    const {finalizado, setFinalizado} = useState(item.finalizado)
 
-        setTarefaConcluida(tarefaConcluida, tarefa)
-    }
+    
 
     return(
-        <div>
+        
+            <div>
+           <input
+           type="checkbox"
+           checked = {finalizado}
+           onChange={e => setFinalizado(e.target.checked)}/>
 
-            <button onClick={finalizarTarefa}>Tarefa concluida</button>
-
-            <button onClick={removerTarefa(tarefa)}>Remover</button>
-        </div>
+           <label>{item.texto}</label>
+            </div>
+        
     )
 }
 
